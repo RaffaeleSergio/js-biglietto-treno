@@ -29,26 +29,35 @@ const ageStr = prompt("Quanti anni hai?")
 const prezzo = 0.21;
 console.log(kmStr, ageStr, prezzo);
 
+if( isNaN(kmStr) === true) {
+    console.log("Valore inserito sbagliato riprova !!!");
+    
+} else if(isNaN(ageStr) === true) {
+    console.log("Valore inserito sbagliato riprova !!!");
+} else{
+    const km = parseInt(kmStr);
+    const age = parseInt(ageStr);
+    console.log(km, age,);
+    
+    
+    
+    let biglietto;
+    
+    if(age <= 17){
+            biglietto = prezzo * km - ((prezzo * km) * 20) / 100 
+    
+    }else if(age >= 65){
+            biglietto = prezzo * km - ((prezzo * km) * 40) / 100
+            
+    } else {
+            biglietto = prezzo * km
+     }
+    
+    
+        console.log(Math.round(biglietto * 100) / 100);
+}
 
-const km = parseInt(kmStr);
-const age = parseInt(ageStr);
-console.log(km, age,);
-
-let biglietto;
-
-
-if(age <= 17){
-        biglietto = prezzo * km - ((prezzo * km) * 20) / 100 
-
-}else if(age >= 65){
-        biglietto = prezzo * km - ((prezzo * km) * 40) / 100
-        
-} else {
-        biglietto = prezzo * km
- }
-
-
-    console.log(Math.round(biglietto * 100) / 100); 
+ 
          
 
 
