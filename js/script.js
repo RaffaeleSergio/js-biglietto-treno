@@ -34,11 +34,7 @@ const km = parseInt(kmStr);
 const age = parseInt(ageStr);
 console.log(km, age,);
 
-let bigliettoStr;
-let biglietto = parseInt(bigliettoStr)
-
-
-
+let biglietto;
 
 
 if(age <= 17){
@@ -50,7 +46,10 @@ if(age <= 17){
 } else {
         biglietto = prezzo * km
  }
-    console.log(biglietto.toFixed(2));     
+
+
+    console.log(Math.round(biglietto * 100) / 100); 
+         
 
 
 
