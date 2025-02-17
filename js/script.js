@@ -30,16 +30,14 @@ const prezzo = 0.21;
 console.log(kmStr, ageStr, prezzo);
 
 if (isNaN(kmStr) === true) {
-    alert("Valore inserito sbagliato riprova !!!");
+    alert("Valore inserito nei chilometri sbagliato riprova !!!");
 
 } else if (isNaN(ageStr) === true) {
-    alert("Valore inserito sbagliato riprova !!!");
+    alert("Valore inserito nell'età sbagliato riprova !!!");
 } else {
     const km = parseInt(kmStr);
     const age = parseInt(ageStr);
     console.log(km, age,);
-
-
 
     let biglietto;
 
@@ -52,8 +50,6 @@ if (isNaN(kmStr) === true) {
     } else {
         biglietto = prezzo * km
     }
-
-
     console.log(Math.round(biglietto * 100) / 100 + `€`);
 }
 
